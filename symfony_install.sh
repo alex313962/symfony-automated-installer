@@ -46,8 +46,8 @@ while true; do
         [Yy]* ) sudo chown $user:$user git;break;;
         [Nn]* ) while true; do
                     read -p "insert the user that must own symfony" selected_user
-                    sudo chown $selected_user:$selected_user git;break;;
-                done
+                    sudo chown $selected_user:$selected_user git
+                done break;;
         * ) echo "Please answer yes or no.";;
     esac
 done

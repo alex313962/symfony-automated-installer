@@ -40,6 +40,7 @@ wget https://get.symfony.com/cli/installer -O - | bash
 sudo mv ~/.symfony/bin/symfony /usr/local/bin/symfony
 symfony check:requirements
 sudo mkdir /var/www/git
+cd /var/www
 while true; do
     read -p "is the user $USER the owner of this symfony installation/project?" default_user
     case $default_user in
@@ -55,12 +56,12 @@ done
 
 while true; do
     read -p "insert your git username" gitUsername
-    git config --global user.name $gitUsername 
+    git config --global user.name $gitUsername; 
 done
 
 while true; do
     read -p "insert your git email" gitEmail
-    git config --global user.email $gitEmail 
+    git config --global user.email $gitEmail; 
 done
 
 echo "if symfony check is successfull, you can start to use Symfony"

@@ -41,13 +41,14 @@ sudo mv ~/.symfony/bin/symfony /usr/local/bin/symfony
 symfony check:requirements
 sudo mkdir /var/www/git
 while true; do
-    read -p "is the user $user the owner of this symfony installation/project?" default_user
+    read -p "is the user $USER the owner of this symfony installation/project?" default_user
     case $default_user in
-        [Yy]* ) sudo chown $user:$user git;break;;
+        [Yy]* ) sudo chown $USER:$USER git;break;;
         [Nn]* ) while true; do
                     read -p "insert the user that must own symfony" selected_user
                     sudo chown $selected_user:$selected_user git
-                done break;;
+                done; 
+                break;;
         * ) echo "Please answer yes or no.";;
     esac
 done

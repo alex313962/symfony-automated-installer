@@ -36,12 +36,7 @@ while true; do
     esac
 done
 
-paru -Sy  php$version apache wget php$version-xml php$version-mbstring php$version-intl php$version-mysql php$version-curl
-php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
-php -r "if (hash_file('sha384', 'composer-setup.php') === '756890a4488ce9024fc62c56153228907f1545c228516cbf63f885e036d37e9a59d27d63f46af1d4d07ee0f76181c7d3') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
-php composer-setup.php 
-php -r "unlink('composer-setup.php');"
-sudo mv composer.phar /usr/local/bin/composer
+paru -Sy --needed php$version apache wget php$version-intl composer
 wget https://get.symfony.com/cli/installer -O - | bash
 sudo mv ~/.symfony/bin/symfony /usr/local/bin/symfony
 symfony check:requirements

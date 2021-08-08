@@ -3,7 +3,7 @@
 cd ~/
 
 
-sudo apt update
+sudo pacman -Sy --needed git
 
 while true; do
     read -p "Do you want to do a full-upgrade?" upgrade
@@ -14,7 +14,7 @@ while true; do
     esac
 done
 
-if ! command -v paru >/dev/null 2>&1; then
+if ! command -v paru &> /dev/null ; then
   sudo pacman -S --needed base-devel
   git clone https://aur.archlinux.org/paru.git
   cd paru

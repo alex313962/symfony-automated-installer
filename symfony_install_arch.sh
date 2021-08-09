@@ -38,6 +38,9 @@ if ! command -v paru &> /dev/null ; then
   cd ..
   rm -r paru
 fi
+
+#install oniguruma
+paru -Sy oniguruma --needed --noconfirm
  
 #check what version the user want and save it into $version 
 while true; do

@@ -7,10 +7,10 @@ sudo pacman -Sy --needed git
 
 
 # install chaotic-aur
-pacman-key --lsign-key 3056513887B78AEB
-pacman-key --recv-key 3056513887B78AEB --keyserver keyserver.ubuntu.com
-pacman -U --noconfirm 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-keyring.pkg.tar.zst' 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-mirrorlist.pkg.tar.zst'
-pacman -Sy
+sudo pacman-key --lsign-key 3056513887B78AEB
+sudo pacman-key --recv-key 3056513887B78AEB --keyserver keyserver.ubuntu.com
+sudo pacman -U --noconfirm 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-keyring.pkg.tar.zst' 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-mirrorlist.pkg.tar.zst'
+sudo pacman -Sy
 
 echo '[chaotic-aur]' | tee -a /etc/pacman.conf
 echo 'Include = /etc/pacman.d/chaotic-mirrorlist' | tee -a /etc/pacman.conf

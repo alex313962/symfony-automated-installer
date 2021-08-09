@@ -60,7 +60,7 @@ done
 paru -Sy --needed php$version apache wget php$version-intl 
 
 #make sys link
-ln -s /usr/bin/php80 /usr/bin/phpèhè 
+ln -s /usr/bin/php80 /usr/bin/php 
 
 #download, install and clean composer from the original repository
 php$version -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"

@@ -59,6 +59,9 @@ done
 #download php apache wget and phpintl
 paru -Sy --needed php$version apache wget php$version-intl 
 
+#make sys link
+ln -s /usr/bin/php80 /usr/bin/phpèhè 
+
 #download, install and clean composer from the original repository
 php$version -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
 php$version -r "if (hash_file('sha384', 'composer-setup.php') === '756890a4488ce9024fc62c56153228907f1545c228516cbf63f885e036d37e9a59d27d63f46af1d4d07ee0f76181c7d3') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"

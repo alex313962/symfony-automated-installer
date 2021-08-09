@@ -12,9 +12,9 @@ sudo pacman-key --recv-key 3056513887B78AEB --keyserver keyserver.ubuntu.com
 sudo pacman -U --noconfirm 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-keyring.pkg.tar.zst' 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-mirrorlist.pkg.tar.zst'
 sudo pacman -Sy
 
-echo '[chaotic-aur]' | tee -a /etc/pacman.conf
-echo 'Include = /etc/pacman.d/chaotic-mirrorlist' | tee -a /etc/pacman.conf
-echo '' | tee -a /etc/pacman.conf
+sudo echo '[chaotic-aur]' | tee -a /etc/pacman.conf
+sudo echo 'Include = /etc/pacman.d/chaotic-mirrorlist' | tee -a /etc/pacman.conf
+sudo echo '' | tee -a /etc/pacman.conf
 
 # question about full upgrade
 while true; do

@@ -15,6 +15,15 @@ curl -O https://raw.githubusercontent.com/alex313962/symfony-automated-installer
 chmod +x symfony_install.sh
 ./symfony_install.sh
 ```
+#TEMPORARY
+i'm testing it for arch linux. For now i'll use two different script
+
+```bash
+curl -O https://raw.githubusercontent.com/alex313962/symfony-automated-installer/master/symfony_install_arch.sh
+chmod +x symfony_install_arch.sh
+./symfony_install_arch.sh
+```
+
 
 It will install Symfony and it's dependecies on the system.
 
